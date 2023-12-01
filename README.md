@@ -9,3 +9,8 @@ $ cargo run
 $ rm -r .git
 ```
 
+## Part one
+
+```
+$ cargo run ../input.txt
+```
