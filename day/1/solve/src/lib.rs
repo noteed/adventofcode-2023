@@ -26,10 +26,26 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>>{
     Ok(())
 }
 
+pub fn replace(line: &str) -> String {
+    // Hack: we keep the first and last letter so that overlapping words
+    // can be detected after a replacement.
+    line
+        .replace("one", "o1e")
+        .replace("two", "t2o")
+        .replace("three", "t3e")
+        .replace("four", "f4r")
+        .replace("five", "f5e")
+        .replace("six", "s6x")
+        .replace("seven", "s7n")
+        .replace("eight", "e8t")
+        .replace("nine", "n9e")
+}
+
 pub fn calibrate(content: &str) -> Vec<u32> {
     let mut result = vec![];
     for line in content.lines() {
-        let l = line.trim_matches(char::is_alphabetic);
+        let replaced = replace(line);
+        let l = replaced.trim_matches(char::is_alphabetic);
         let s = l.chars().nth(0).unwrap().to_string()
               + &l.chars().last().unwrap().to_string();
         let n = s.parse().unwrap();
@@ -43,16 +59,29 @@ mod tests {
     use super::*;
 
     #[test]
-    fn example() {
+    fn example_calibrate() {
         let content = "\
-1abc2
-pqr3stu8vwx
-a1b2c3d4e5f
-treb7uchet";
+two1nine
+eightwothree
+abcone2threexyz
+xtwone3four
+4nineeightseven2
+zoneight234
+7pqrstsixteen";
 
         assert_eq!(
-            vec![12, 38, 15, 77],
+            vec![29, 83, 13, 24, 42, 14, 76],
             calibrate(content)
+        );
+    }
+
+    #[test]
+    fn example_replace() {
+        let line = "abcone2threexyz";
+
+        assert_eq!(
+            "abco1e2t3exyz",
+            replace(line)
         );
     }
 }
