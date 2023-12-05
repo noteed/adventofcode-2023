@@ -27,3 +27,24 @@ $ nix-shell -I nixpkgs=channel:nixos-unstable -p cargo
 $ cargo new solve
 $ cd solve/
 ```
+
+# Day 3 and 4
+
+Similarly as before.
+
+# Day 5
+
+Use
+
+```
+$ time cargo run --release
+...
+real    1m46.364s
+user    1m46.349s
+sys     0m0.012s
+```
+
+I guess that instead of resolving individual numbers (seeds), I should resolve
+ranges. So that after each "stage", the output is one (best case) or multiple
+ranges. And before proceeding to next stage, ranges that are "compaptible"
+could be merged together.
