@@ -48,3 +48,7 @@ I guess that instead of resolving individual numbers (seeds), I should resolve
 ranges. So that after each "stage", the output is one (best case) or multiple
 ranges. And before proceeding to next stage, ranges that are "compaptible"
 could be merged together.
+
+# Day 6
+
+For part two, I simply changed the `input.txt` file manually.
