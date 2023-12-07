@@ -52,3 +52,7 @@ could be merged together.
 # Day 6
 
 For part two, I simply changed the `input.txt` file manually.
+
+# Day 7
+
+The code corresponds to part two. Part one is commented out/changed.
