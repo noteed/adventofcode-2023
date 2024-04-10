@@ -1,7 +1,7 @@
 use std::env;
 use std::process;
 
-use solve::Config;
+use day1::Config;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -10,7 +10,7 @@ fn main() {
         process::exit(1);
     });
 
-    if let Err(err) = solve::run(config) {
+    if let Err(err) = day1::run(config) {
         println!("Something went wrong reading the file: {}", err);
         process::exit(1);
     };

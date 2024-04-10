@@ -10,9 +10,8 @@ solutions). Puzzle description page URLs look like
 ```
 $ cd day/1
 $ nix-shell -p cargo
-$ cargo new solve
-$ cd solve/
-$ cargo run ../input.txt
+$ cargo new solve # But this was renamed, see below.
+$ cargo ./input.txt
 ...
 Sum: 52834
 $ rm -r .git
@@ -34,15 +33,6 @@ Each participant receive their own input, so it's ok to publish the results.
 
 In addition of `input.txt`, there is also a shorter `example.txt` file.
 
-## Part ~one and~ two
-
-```
-$ cargo run ../input.txt
-...
-Sum: 2176
-Sum of powers: 63700
-```
-
 # Day 2
 
 It seems I need rustc 1.61 (the above provided 1.60) to build `nom` 7.1.3. So
@@ -52,8 +42,13 @@ quite old too.) This brings me to rustc 1.73.
 ```
 $ cd day/2
 $ nix-shell -I nixpkgs=channel:nixos-unstable -p cargo
-$ cargo new solve
-$ cd solve/
+```
+
+```
+$ cargo run ./input.txt
+...
+Sum: 2176
+Sum of powers: 63700
 ```
 
 # Day 3

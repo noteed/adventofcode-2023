@@ -22,18 +22,18 @@ fn main() {
             process::exit(1);
         });
 
-    let input_file = matches.value_of("input").unwrap();
+    let input_file = matches.value_of("input").unwrap().to_string();
 
     match day {
         1 => {
-            let config = day1::Config::from_filename(input_file.to_string());
+            let config = day1::Config::from_filename(input_file);
             if let Err(err) = day1::run(config) {
                 println!("Something went wrong reading the file: {}", err);
                 process::exit(1);
             };
         },
         2 => {
-            // Handle day 2
+            day2::run(input_file);
         },
         _ => {
             println!("Day {} is not implemented", day);

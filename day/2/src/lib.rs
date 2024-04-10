@@ -12,11 +12,7 @@ use nom::{
 use std::cmp;
 use std::fs;
 
-fn main() {
-  let game_str = "Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green";
-  let game_str = "Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue";
-  let game_str = "Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red";
-  let game_str = "Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red";
+pub fn run(filename: String) {
   let game_str = "Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green";
   let result = parse_game(game_str).finish();
   match result {
@@ -28,8 +24,8 @@ fn main() {
     }
   }
 
-    println!("Opening file '{}'...", "../input.txt");
-    let content = fs::read_to_string("../input.txt").expect("XXX");
+    println!("Opening file '{}'...", filename);
+    let content = fs::read_to_string(filename).expect("XXX");
 
     let mut numbers = vec![];
     let mut powers = vec![];
@@ -160,8 +156,4 @@ fn is_digit(c: char) -> bool {
 
 fn is_alpha(c: char) -> bool {
   c.is_ascii_alphabetic()
-}
-
-fn is_not_semicolon(c: char) -> bool {
-  c != ';'
 }
