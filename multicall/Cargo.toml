@@ -9,3 +9,11 @@ edition = "2021"
 clap = "3.0"
 day1 = { path = "../day/1/" }
 day2 = { path = "../day/2/" }
+day3 = { path = "../day/3/" }
+day4 = { path = "../day/4/" }
+day5 = { path = "../day/5/" }
+day6 = { path = "../day/6/" }
+day7 = { path = "../day/7/" }
+day8 = { path = "../day/8/" }
+day9 = { path = "../day/9/" }
+day10 = { path = "../day/10/" }

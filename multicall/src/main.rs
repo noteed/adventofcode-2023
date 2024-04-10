@@ -35,6 +35,30 @@ fn main() {
         2 => {
             day2::run(input_file);
         },
+        3 => {
+            day3::run(input_file);
+        },
+        4 => {
+            day4::run(input_file);
+        },
+        5 => {
+            day5::run(input_file);
+        },
+        6 => {
+            day6::run(input_file);
+        },
+        7 => {
+            day7::run(input_file);
+        },
+        8 => {
+            day8::run(input_file);
+        },
+        9 => {
+            day9::run(input_file);
+        },
+        10 => {
+            day10::run(input_file);
+        },
         _ => {
             println!("Day {} is not implemented", day);
             process::exit(1);

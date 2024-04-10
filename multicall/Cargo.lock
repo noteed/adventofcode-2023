@@ -54,7 +54,61 @@ name = "day1"
 version = "0.1.0"
 
 [[package]]
+name = "day10"
+version = "0.1.0"
+dependencies = [
+ "nom",
+]
+
+[[package]]
 name = "day2"
+version = "0.1.0"
+dependencies = [
+ "nom",
+]
+
+[[package]]
+name = "day3"
+version = "0.1.0"
+
+[[package]]
+name = "day4"
+version = "0.1.0"
+dependencies = [
+ "nom",
+]
+
+[[package]]
+name = "day5"
+version = "0.1.0"
+dependencies = [
+ "nom",
+]
+
+[[package]]
+name = "day6"
+version = "0.1.0"
+dependencies = [
+ "nom",
+]
+
+[[package]]
+name = "day7"
+version = "0.1.0"
+dependencies = [
+ "nom",
+]
+
+[[package]]
+name = "day8"
+version = "0.1.0"
+dependencies = [
+ "nom",
+ "num-integer",
+]
+
+[[package]]
+name = "day9"
 version = "0.1.0"
 dependencies = [
  "nom",
@@ -109,7 +163,15 @@ version = "0.1.0"
 dependencies = [
  "clap",
  "day1",
+ "day10",
  "day2",
+ "day3",
+ "day4",
+ "day5",
+ "day6",
+ "day7",
+ "day8",
+ "day9",
 ]
 
 [[package]]
@@ -120,6 +182,24 @@ checksum = "d273983c5a657a70a3e8f2a01329822f3b8c8172b73826411a55751e404a0a4a"
 dependencies = [
  "memchr",
  "minimal-lexical",
+]
+
+[[package]]
+name = "num-integer"
+version = "0.1.46"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7969661fd2958a5cb096e56c8e1ad0444ac2bbcd0061bd28660485a44879858f"
+dependencies = [
+ "num-traits",
+]
+
+[[package]]
+name = "num-traits"
+version = "0.2.18"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "da0df0e5185db44f69b44f26786fe401b6c293d1907744beaa7fa62b2e5a517a"
+dependencies = [
+ "autocfg",
 ]
 
 [[package]]

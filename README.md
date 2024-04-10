@@ -54,7 +54,7 @@ Sum of powers: 63700
 # Day 3
 
 ```
-$ cargo run ../input.txt
+$ cargo run ./input.txt
 ...
 Part one: 525181
 Part two: 84289137
@@ -63,7 +63,7 @@ Part two: 84289137
 # Day 4
 
 ```
-$ cargo run ../input.txt
+$ cargo run ./input.txt
 ...
 Part two: 14624680
 ```
@@ -73,7 +73,7 @@ Part two: 14624680
 Use
 
 ```
-$ time cargo run --release ../input.txt
+$ time cargo run --release ./input.txt
 ...
 Part one: Some(322500873)
 Part two: 108956227
@@ -94,13 +94,13 @@ could be merged together.
 For part two, I simply changed the `input.txt` file manually.
 
 ```
-$ cargo run ../input-part-1.txt
+$ cargo run ./input-part-1.txt
 ...
 Part one: 24655068
 ```
 
 ```
-$ cargo run ../input.txt
+$ cargo run ./input.txt
 ...
 Part one: 24655068
 ```
@@ -110,7 +110,7 @@ Part one: 24655068
 The code corresponds to part two. Part one is commented out/changed.
 
 ```
-$ cargo run ../input.txt
+$ cargo run ./input.txt
 ...
 Part one: 251824095
 ```
@@ -118,7 +118,7 @@ Part one: 251824095
 # Day 8
 
 ```
-$ cargo run ../input.txt
+$ cargo run ./input.txt
 ...
 Part one: 16409
 ["QXA", "PDA", "TDA", "QQA", "PPA", "AAA"]
@@ -134,7 +134,7 @@ Part two: 11795205644011
 # Day 9
 
 ```
-$ cargo run ../input.txt
+$ cargo run ./input.txt
 ...
 Part two: 1112
 ```
@@ -142,7 +142,7 @@ Part two: 1112
 # Day 10
 
 ```
-$ cargo run --release
+$ cargo run --release ./input.txt
 ...
 Part one: 6599
 ```
