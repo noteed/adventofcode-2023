@@ -25,6 +25,10 @@ I've created a `day/1/solve/` directory structure, but I should have used
 `day/1/` instead (same for the following days). The puzzle input files are
 outside of `solve/` (i.e. `day/1/input.txt` for instance).
 
+When implementing the `multicall` binary (see below after Day 10), I've removed
+the `solve/` subdirectory, and renamed the package name from "solve" to "day1"
+in the `Cargo.toml` file.
+
 Each participant receive their own input, so it's ok to publish the results.
 (And keeping them here helps during refactoring.)
 
@@ -149,3 +153,13 @@ Part one: 6599
 ```
 
 I havn't made part 2.
+
+
+# Multi-calls
+
+A binary to run all puzzles is given too.
+
+```
+$ cargo new --vcs none multicall
+$ cargo run -- --day 3 ../day/1/input.txt
+```
