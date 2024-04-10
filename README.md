@@ -161,5 +161,7 @@ A binary to run all puzzles is given too.
 
 ```
 $ cargo new --vcs none multicall
-$ cargo run -- --day 3 ../day/1/input.txt
+$ cargo run -- --day 1 ../day/1/input.txt
+...
+Sum: 52834
 ```

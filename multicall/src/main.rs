@@ -26,7 +26,11 @@ fn main() {
 
     match day {
         1 => {
-            // Handle day 1
+            let config = day1::Config::from_filename(input_file.to_string());
+            if let Err(err) = day1::run(config) {
+                println!("Something went wrong reading the file: {}", err);
+                process::exit(1);
+            };
         },
         2 => {
             // Handle day 2

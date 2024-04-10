@@ -6,6 +6,7 @@ pub struct Config {
 }
 
 impl Config {
+    // Parse args. Used in e.g. day/1/src/main.rs.
     pub fn new(args: &[String]) -> Result<Config, &'static str> {
         if args.len() < 2 {
             return Err("Not enough command-line arguments");
@@ -13,6 +14,11 @@ impl Config {
 
         let filename = args[1].clone();
         Ok(Config { filename })
+    }
+
+    // Take directly a filename. Used in the multicall binary.
+    pub fn from_filename(filename: String) -> Config {
+        Config { filename }
     }
 }
 
